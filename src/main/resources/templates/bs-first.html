@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!--<link href="../static/public/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="../static/public/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet">-->
+    <title>首页</title>
+</head>
+<body>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">首页</h3>
+    </div>
+    <div class="panel-body">
+        <p>首页面板详情</p>
+    </div>
+    <div th:if="${not #lists.isEmpty(userInfoList)}">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">...</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item" th:each="item : ${userInfoList}">
+                        <span th:text="${item.userInfoId}"></span>
+                        <span th:text="${item.userName}"></span>
+                        <span th:text="${item.userPhone}"></span>
+                        <span th:text="${item.userEmail}"></span>
+                        <span th:text="${item.datachangeCreatetime}"></span>
+                        <span th:text="${item.datachangeLasttime}"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>;
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="../static/public/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+<script th:inline="javascript">
+//    $(function(){
+//        $(".btn").click(function(){
+//            alert("删除功能完善中...");
+//        });
+//    });
+</script>
+</body>
+</html>
