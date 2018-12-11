@@ -15,4 +15,8 @@ public class UserService {
     public List<User> getUsers() {
         return userMapper.getUsers();
     }
+
+    public void taskTest(){
+        System.out.println("我是注入的service中的方法，测试Task...");
+    }
 }

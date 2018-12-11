@@ -8,6 +8,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -17,6 +18,7 @@ import java.util.List;
 @SpringBootApplication
 @MapperScan("com.example.demo.mapper")
 @EnableCaching // cache
+@EnableScheduling // task
 public class Application extends WebMvcConfigurationSupport {
 
 	public static void main(String[] args) {
