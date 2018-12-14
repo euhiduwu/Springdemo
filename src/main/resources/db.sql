@@ -9,4 +9,4 @@ CREATE TABLE `user_info` (
   `datachange_lasttime` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
   PRIMARY KEY (`user_info_id`),
   KEY `ix_datachange_lasttime` (`datachange_lasttime`)
-) ENGINE = InnoDB AUTO_INCREMENT = 2 DEFAULT CHARSET = utf8 COMMENT '用户信息';
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8 COMMENT '用户信息';
